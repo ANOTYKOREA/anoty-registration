@@ -779,7 +779,7 @@ async function handleSubmit(e) {
   btn.disabled = true;
   btn.textContent = '등록 중...';
 
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxOVxkmnzXpHlqS3TspiB-P64I4EojMgos5VtyVjz0qCPVg0i19qTPPB5oVn-PCGzBm/exec';
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxDifFoOTovw0XW5HxroRZW28m25HysypN2HotBE-5JNMC_XEUsOdmOcJDpfc7kmiFx/exec';
 
   const payload = {
     name,
@@ -810,7 +810,7 @@ async function handleSubmit(e) {
 function showSuccess(data) {
   const purchaseDate = new Date(data.date);
   const warrantyDate = new Date(purchaseDate);
-  warrantyDate.setFullYear(warrantyDate.getFullYear() + 2);
+  warrantyDate.setFullYear(warrantyDate.getFullYear() + 10);
   const fmt = d => `${d.getFullYear()}년 ${d.getMonth()+1}월 ${d.getDate()}일`;
 
   document.getElementById('successInfo').innerHTML = `
@@ -858,7 +858,7 @@ async function handleLookup() {
   btn.disabled = true;
   btn.textContent = '조회 중...';
 
-  const LOOKUP_URL = 'https://script.google.com/macros/s/AKfycbxjPcUtG-On52obipCMoBqWQluING0OZBio6IogBmngxvGwa-WMjwUXTiLFjNUEdp8b/exec';
+  const LOOKUP_URL = 'https://script.google.com/macros/s/AKfycbxDifFoOTovw0XW5HxroRZW28m25HysypN2HotBE-5JNMC_XEUsOdmOcJDpfc7kmiFx/exec';
 
   try {
     const res = await fetch(`${LOOKUP_URL}?code=${encodeURIComponent(code)}&phone=${encodeURIComponent(phone)}`);
