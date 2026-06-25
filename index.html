@@ -858,7 +858,7 @@ async function handleLookup() {
   btn.disabled = true;
   btn.textContent = '조회 중...';
 
-  const LOOKUP_URL = 'https://script.google.com/macros/s/AKfycbwXB4w1N95n6w7AVhItxjMWE22A_2gK3kC2wzV4Sz4V35iTn_Z07tWfn9k9o8Nl_lvh/exec';
+  const LOOKUP_URL = 'https://script.google.com/macros/s/AKfycbxjPcUtG-On52obipCMoBqWQluING0OZBio6IogBmngxvGwa-WMjwUXTiLFjNUEdp8b/exec';
 
   try {
     const res = await fetch(`${LOOKUP_URL}?code=${encodeURIComponent(code)}&phone=${encodeURIComponent(phone)}`);
